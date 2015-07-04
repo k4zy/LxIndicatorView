@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <layer-list>
+            <item android:left="@dimen/indicator_circle_margin" android:right="@dimen/indicator_circle_margin">
+                <shape android:shape="oval">
+                    <solid android:color="@color/gray" />
+                    <size android:width="@dimen/indicator_circle_size" android:height="@dimen/indicator_circle_size" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:left="@dimen/indicator_circle_margin" android:right="@dimen/indicator_circle_margin">
+                <shape android:shape="oval">
+                    <solid android:color="@color/light_gray" />
+                    <size android:width="@dimen/indicator_circle_size" android:height="@dimen/indicator_circle_size" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

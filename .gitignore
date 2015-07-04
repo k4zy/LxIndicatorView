@@ -1,0 +1,58 @@
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+.classpath
+.project
+
+# Proguard files
+proguard.map
+
+# Intellij project files
+*.iml
+*.ipr
+*.iws
+.idea/*
+!.idea/codeStyleSettings.xml
+
+# Gradle files
+.gradle
+build
+
+# Credentials
+shared_settings.gradle
+signing.gradle
+
+# bundle files
+.bundle
+vendor/bundle
+
+# Crashlytics
+com_crashlytics_export_strings.xml
+crashlytics-build.properties
+crashlytics.properties
+
+.DS_Store
+
+# for notifier plugin
+# https://github.com/tomorrowkey/notifier-plugin
+notifier.groovy
+
+# generated files
+cookpad/src/debug/res/*/ic_launcher.png
+cookpad/src/productSmartpassDebug/res/*/icon.png
+cookpad/src/stagingSmartpassDebug/res/*/icon.png
