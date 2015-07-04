@@ -3,6 +3,8 @@ LxIndicatorView
 
 too simple Indicator View
 
+<img width=400 src="http://i.gyazo.com/c8a3210488b1d5e2843a1b05d7119545.png" />
+
 How to
 --------
 
