@@ -8,7 +8,27 @@ too simple Indicator View
 How to
 --------
 
-Please see sample_code(app module)  
+##### Step 1. Add the JitPack repository to your build file
+
+```groovy
+  repositories {
+    maven {
+      url "https://jitpack.io"
+    }
+  }
+```
+
+##### Step 2. Add the dependency in the form
+
+```groovy
+  dependencies {
+    compile 'com.github.kazy1991:LxIndicatorView:0.2'
+  }
+```
+
+##### Step 3. Read Sample Code
+
+Please read [sample_code(app module)](https://github.com/kazy1991/LxIndicatorView/tree/master/app)
 you learn a few things that using this library
 
 License
