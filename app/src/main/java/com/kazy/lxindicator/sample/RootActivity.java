@@ -21,9 +21,9 @@ public class RootActivity extends AppCompatActivity {
         final IndicatorView indicatorView = (IndicatorView) findViewById(R.id.indicator_view);
         indicatorView.init(VIEW_COUNT, R.drawable.indicator);
         SampleViewPagerAdapter adapter = new SampleViewPagerAdapter();
-        for (int i = 0; i < VIEW_COUNT; i++) {
+        for (int color : COLOR_LIST) {
             FrameLayout view = new FrameLayout(this);
-            view.setBackgroundColor(COLOR_LIST[i]);
+            view.setBackgroundColor(color);
             adapter.addView(view);
         }
         viewPager.setAdapter(adapter);
