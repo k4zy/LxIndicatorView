@@ -1,6 +1,6 @@
 package com.kazy.lxindicator.sample;
 
-import com.kazy.lxindicator.IndicatorView;
+import com.kazy.lxindicator.LxIndicatorGroup;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -18,8 +18,8 @@ public class RootActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_root);
         final ViewPager viewPager = (ViewPager) findViewById(R.id.view_pager);
-        final IndicatorView indicatorView = (IndicatorView) findViewById(R.id.indicator_view);
-        indicatorView.init(VIEW_COUNT, R.drawable.indicator);
+        final LxIndicatorGroup indicatorGroup = (LxIndicatorGroup) findViewById(R.id.indicator_view);
+        indicatorGroup.setup(VIEW_COUNT, R.drawable.indicator);
         SampleViewPagerAdapter adapter = new SampleViewPagerAdapter();
         for (int color : COLOR_LIST) {
             FrameLayout view = new FrameLayout(this);
@@ -27,22 +27,7 @@ public class RootActivity extends AppCompatActivity {
             adapter.addView(view);
         }
         viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                // do nothing
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-                indicatorView.setPagePosition(position);
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-                // do nothing
-            }
-        });
+        viewPager.addOnPageChangeListener(indicatorGroup.getSyncPositionListener());
     }
 
 }

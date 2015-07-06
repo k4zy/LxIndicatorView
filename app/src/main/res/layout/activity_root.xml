@@ -11,7 +11,7 @@
             android:layout_gravity="center"
             />
 
-    <com.kazy.lxindicator.IndicatorView
+    <com.kazy.lxindicator.LxIndicatorGroup
             android:id="@+id/indicator_view"
             android:layout_width="match_parent"
             android:layout_height="30dp"
