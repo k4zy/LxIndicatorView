@@ -27,7 +27,7 @@ public class RootActivity extends AppCompatActivity {
             adapter.addView(view);
         }
         viewPager.setAdapter(adapter);
-        viewPager.addOnPageChangeListener(indicatorGroup.getSyncPositionListener());
+        viewPager.addOnPageChangeListener(indicatorGroup.getPositionSyncListener());
     }
 
 }

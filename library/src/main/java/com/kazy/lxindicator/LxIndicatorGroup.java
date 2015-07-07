@@ -21,7 +21,7 @@ public class LxIndicatorGroup extends RadioGroup {
 
     private final static ViewGroup.LayoutParams MATCH_PARAMS = new LinearLayout.LayoutParams(MATCH_PARENT, MATCH_PARENT);
 
-    private final ViewPager.OnPageChangeListener syncPositionListener = new ViewPager.OnPageChangeListener() {
+    private final ViewPager.OnPageChangeListener positionSyncListener = new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
             // do nothing
@@ -49,8 +49,8 @@ public class LxIndicatorGroup extends RadioGroup {
         setGravity(Gravity.CENTER);
     }
 
-    public ViewPager.OnPageChangeListener getSyncPositionListener() {
-        return this.syncPositionListener;
+    public ViewPager.OnPageChangeListener getPositionSyncListener() {
+        return this.positionSyncListener;
     }
 
     public void setup(int pageCount, @DrawableRes int resId) {
