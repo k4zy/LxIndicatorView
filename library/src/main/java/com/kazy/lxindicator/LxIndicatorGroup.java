@@ -1,9 +1,8 @@
 package com.kazy.lxindicator;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.support.annotation.DrawableRes;
+import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.Gravity;
@@ -59,7 +58,7 @@ public class LxIndicatorGroup extends RadioGroup {
         for (int i = 0; i < pageCount; i++) {
             ImageView indicatorView = new ImageView(getContext());
             indicatorView.setLayoutParams(WRAP_PARAMS);
-            indicatorView.setImageDrawable(getDrawableResource(resId));
+            indicatorView.setImageDrawable(ResourcesCompat.getDrawable(getResources(), resId, null));
             addView(indicatorView);
         }
         setPagePosition(0);
@@ -74,15 +73,6 @@ public class LxIndicatorGroup extends RadioGroup {
         int childCount = getChildCount();
         for (int i = 0; i < childCount; i++) {
             getChildAt(i).setSelected(false);
-        }
-    }
-
-    @SuppressWarnings("deprecation")
-    private Drawable getDrawableResource(int id) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            return getContext().getDrawable(id);
-        } else {
-            return getResources().getDrawable(id);
         }
     }
 }
