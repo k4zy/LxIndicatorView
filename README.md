@@ -22,7 +22,7 @@ How to
 
 ```groovy
   dependencies {
-    compile 'com.github.kazy1991:LxIndicatorView:0.2'
+    compile 'com.github.kazy1991:LxIndicatorView:1.1'
   }
 ```
 
